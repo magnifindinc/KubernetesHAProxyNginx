@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 ### Example
 ```
-./configureService.py --api-server "http://my.kubernetes.localhost:8080" --interval 3 --proxy-type ngin
+./configureService.py --api-server "http://my.kubernetes.localhost:8080" --interval 3 --proxy-type nginx
 ```
 
 ### Contact
