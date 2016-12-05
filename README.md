@@ -18,6 +18,10 @@ By default, the API is exposed only on localhost you might want to solve it with
 
 **Another option (recommended) is to run the script from within the master and write a shell script that will run the command remotly via SSH**
 
+Since you probably want the proxy to use more than one domain you must add one more label (hostheader) to your desired service.
+
+Here is an exmaple: "hostheader": "www.mydomain.tld"
+
 ### Installing
 
 ```
