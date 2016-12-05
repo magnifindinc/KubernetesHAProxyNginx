@@ -14,7 +14,9 @@ Obviously, you'll need to make small changes in the jinja template and with the 
 # Installation and Configuration
 Nothing fancy or complex... Install all the needed modules with pip and make sure this machine can access to the Kubernetes master api with no credentials.
 
-By default, the API is exposed only on localhost you might want to solve it with a simple port farwards rule to the specific machine that samples it. Another option (recommended) is to run the script from within the master and run the command remotly via SSH.
+By default, the API is exposed only on localhost you might want to solve it with a simple port farwards rule to the specific machine that samples it. 
+
+**Another option (recommended) is to run the script from within the master and run the command remotly via SSH**
 
 ### Installing
 
