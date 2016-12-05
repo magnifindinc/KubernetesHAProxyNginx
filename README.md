@@ -6,8 +6,8 @@ Kubernetes does not integrate with HAproxy so we needed to write a small program
 
 We recommend using running the service under runit (We love runit!) since it's platform independant, simple fast and straight forward.
 
-# How is it woring?
-Very simple! The script pings Kubernetes API every 5 seconds if anything changes in the relevant services or update with the nodes it will reconfigure haproxy. The program will only configure HAProxy/Nginx with services that is using *NodePort*
+# How is it working?
+Very simple! The script pings Kubernetes API every 5 seconds if anything changes in the relevant services or update with the nodes it will reconfigure haproxy. The program will only configure HAProxy/Nginx with services that is using **NodePort**
 
 Obviously, you'll need to make small changes in the jinja template and with the DoSomething function.
 
