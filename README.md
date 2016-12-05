@@ -29,3 +29,7 @@ pip install -r requirements.txt
 ```
 ./configureService.py --api-server "http://my.kubernetes.localhost:8080" --interval 3 --proxy-type ngin
 ```
+
+### Contact
+Feel free to fork, contribute or ask any quesion :)
+My Email address: adir.iakya@magnifind.ca
