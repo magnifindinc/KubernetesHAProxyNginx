@@ -1,4 +1,4 @@
-# Kubernetes Dynamic Configuration for HAProxy
+# Kubernetes Dynamic Configuration for HAProxy and Nginx
 ## Backround
 at Magnifind.ca we are using Kubernetes under AWS. in order to save costs and keep our architecture simple and secure in some cases we are using HAproxy to balance within our internal services.
 
@@ -25,11 +25,7 @@ git clone git@github.com:magnifindinc/KubernetesHAProxy.git
 pip install -r requirements.txt
 ```
 
-### Configuring IPTables Port Forward
+### Example
 ```
-# Port Forward
-iptables -t nat -A PREROUTING -p tcp --dport 8080 -j DNAT --to-destination 127.0.0.1:8080
-
-# Allow only specific machine access
-iptables -A INPUT -s IP_ADDR/CIDR -p tcp --dport 8080 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+./configureService.py --api-server "http://my.kubernetes.localhost:8080" --interval 3 --proxy-type ngin
 ```
