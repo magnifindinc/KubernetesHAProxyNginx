@@ -16,7 +16,7 @@ Nothing fancy or complex... Install all the needed modules with pip and make sur
 
 By default, the API is exposed only on localhost you might want to solve it with a simple port farwards rule to the specific machine that samples it. 
 
-**Another option (recommended) is to run the script from within the master and run the command remotly via SSH**
+**Another option (recommended) is to run the script from within the master and write a shell script that will run the command remotly via SSH**
 
 ### Installing
 
