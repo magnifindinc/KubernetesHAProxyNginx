@@ -33,8 +33,7 @@ if __name__ == '__main__':
             print("%s : Something Changed! Lets run the command: %s" % (currentTime, cliarguments.command))
             utils.utilities().andAction(cliarguments)
 
-        newMD5SUM = currentMD5SUM
-        newSERVICESMD5SUM = currentSERVICESMD5SUM
+        newMD5SUM, newSERVICESMD5SUM = currentMD5SUM, currentSERVICESMD5SUM
 
         time.sleep(cliarguments.interval)
 
