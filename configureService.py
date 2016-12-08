@@ -19,7 +19,7 @@ cliarguments = parser.parse_args()
 if __name__ == '__main__':
 
     # First time running... run the script and sample
-    currentMD5SUM, currentSERVICESMD5SUM = utils.utilities().checkMD5s(cliarguments)
+    currentNODEMD5SUM, currentSERVICESMD5SUM = utils.utilities().checkMD5s(cliarguments)
     print("%s : Script started!" % time.strftime("%c"))
 
     utils.utilities().andAction(cliarguments)
@@ -27,16 +27,16 @@ if __name__ == '__main__':
     while True:
         currentTime = time.strftime("%c")
         
-        newMD5SUM, newSERVICESMD5SUM = utils.utilities().checkMD5s(cliarguments)
+        newNODESMD5SUM, newSERVICESMD5SUM = utils.utilities().checkMD5s(cliarguments)
 
-        if (newMD5SUM not in currentMD5SUM) or (newSERVICESMD5SUM not in currentSERVICESMD5SUM):
+        if (newNODESMD5SUM not in currentNODEMD5SUM) or (newSERVICESMD5SUM not in currentSERVICESMD5SUM):
             print("%s : Something Changed! Lets run the command: %s" % (currentTime, cliarguments.command))
             utils.utilities().andAction(cliarguments)
 
-        newMD5SUM, newSERVICESMD5SUM = currentMD5SUM, currentSERVICESMD5SUM
+        newNODESMD5SUM, newSERVICESMD5SUM = currentNODEMD5SUM, currentSERVICESMD5SUM
 
         time.sleep(cliarguments.interval)
 
         if cliarguments.verbose:
-            print(currentTime, newMD5SUM, currentMD5SUM)
+            print(currentTime, newNODESMD5SUM, currentNODEMD5SUM)
             print(currentTime, currentSERVICESMD5SUM, newSERVICESMD5SUM)
