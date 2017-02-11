@@ -34,3 +34,4 @@ pip install -r requirements.txt
 Feel free to fork, contribute or ask any quesion :)
 My Email address: adir.iakya@magnifind.ca
 
+
